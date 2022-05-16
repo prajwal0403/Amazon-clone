@@ -1,0 +1,21 @@
+{
+  "name": "mern-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd back && npm install  && cd ../ecommerce && npm install && npm run build",
+    "start": "node back/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prajwal0403/MERN-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prajwal0403/MERN-app/issues"
+  },
+  "homepage": "https://github.com/prajwal0403/MERN-app#readme"
+}
