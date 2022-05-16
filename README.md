@@ -22,6 +22,7 @@ npm start
 ##### sort products 
 ##### Add products to cart.
 ##### Change the required number for products.
+##### implemented sidebar 
 ##### Payment with PayPal.
 ##### Create order.
 ##### Check order history.
@@ -32,6 +33,8 @@ npm start
 #### Mongodb
 #### React
 #### Redux
+#### nodejs
+#### npm
 #### Express
 #### HTML
 #### CSS
