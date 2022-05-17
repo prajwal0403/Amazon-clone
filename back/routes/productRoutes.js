@@ -10,10 +10,18 @@ productRouter.get('/', async (req, res) => {
   res.send(products);
 });
 
+productRouter.get(
+  '/categories',
+  expressAsyncHandler(async (req, res) => {
+    const categories = await Product.find().distinct('category');
+    res.send(categories);
+  })
+);
+
 productRouter.post(
   '/',
-  // isAuth,
-  // isAdmin,
+  isAuth,
+  isAdmin,
   expressAsyncHandler(async (req, res) => {
     const {name,slug,image,price,category,brand,countInStock,
       rating,numReviews,description} = req.body;
@@ -47,8 +55,8 @@ productRouter.post(
 
 productRouter.put(
   '/:id',
-  // isAuth,
-  // isAdmin,
+  isAuth,
+  isAdmin,
   expressAsyncHandler(async (req, res) => {
     const productId = req.params.id;
     const product = await Product.findById(productId);
@@ -72,8 +80,8 @@ productRouter.put(
 
 productRouter.delete(
   '/:id',
-  // isAuth,
-  // isAdmin,
+  isAuth,
+  isAdmin,
   expressAsyncHandler(async (req, res) => {
     const product = await Product.findById(req.params.id);
     if (product) {
