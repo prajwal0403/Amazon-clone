@@ -1,6 +1,6 @@
 # Deployment Link
 ```bash
-https://finalecomsite.herokuapp.com/
+https://test-n5u4.onrender.com/
 ```
 # Amazon (MERN) app
 
